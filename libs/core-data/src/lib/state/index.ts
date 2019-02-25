@@ -1,13 +1,16 @@
 import { ActionReducerMap, createFeatureSelector, createSelector } from '@ngrx/store';
 
 import * as fromCustomers from './customers/customers.reducer';
+import * as fromProjecs from './projects/projects.reducer';
 
 export interface AppState {
-  customers: fromCustomers.CustomersState
+  customers: fromCustomers.CustomersState,
+  projects: fromProjecs.ProjectsState,
 }
 
 export const reducers: ActionReducerMap<AppState> = {
-  customers: fromCustomers.customersReducer
+  customers: fromCustomers.customersReducer,
+  projects: fromProjecs.projectsReducer
 };
 
 // -------------------------------------------------------------------
